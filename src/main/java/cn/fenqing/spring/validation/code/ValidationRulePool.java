@@ -14,8 +14,6 @@ import java.util.stream.Collectors;
 /**
  * @author fenqing
  * @version 0.0.1
- * @date 2021/7/7 9:28
- * @description 规则池
  */
 public class ValidationRulePool {
 

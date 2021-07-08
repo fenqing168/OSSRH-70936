@@ -1,23 +1,24 @@
 package cn.fenqing.spring.validation.code;
 
-import cn.fenqing.validation.bean.ValidationResult;
+
+import cn.fenqing.spring.validation.annotation.ActivateValidation;
+import cn.fenqing.spring.validation.bean.ValidationResult;
 
 import java.lang.annotation.Annotation;
 
 /**
  * @author fenqing
  * @version 0.0.1
- * @date 2021/7/7 9:20
- * @description 校验规则
  */
 public interface ValidationRuleHeadler<T extends Annotation> {
 
     /**
      * 校验方法
-     * @param annotation
-     * @param object
-     * @return
+     * @param annotation 注解类型
+     * @param activateValidation 包含group
+     * @param object 校验对象
+     * @return 结果
      */
-    ValidationResult validation(T annotation, Object object);
+    ValidationResult validation(T annotation, ActivateValidation activateValidation, Object object);
 
 }
